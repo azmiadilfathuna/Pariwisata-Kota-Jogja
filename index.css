@@ -130,7 +130,7 @@ nav .fa{
     text-align: center;
     padding-top: 100px;
 }
-.h1{
+.isiatas h1{
     font-size: 36px;
     font-weight: 600;
 }
@@ -188,6 +188,8 @@ nav .fa{
     text-decoration: none;
     color: #000000;
     transition: 0.5s;
+    font-size: 36px;
+    font-weight: 600;
 }
 .isi h1 a:hover{
     color: #ff5e52;
