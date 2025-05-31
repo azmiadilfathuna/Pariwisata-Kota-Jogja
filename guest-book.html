@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI Pawiwisata KOTA JOGJA</title>
+  <link rel="stylesheet" href="guest book.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="tutupmenu()"></i>
+          <ul>
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="article.html" class="nav-link">ARTICLE</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="guest-book.html" class="nav-link">GUEST BOOK</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="bukakmenu()"></i>
+    </nav>
+  </section>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname; // Mengambil path dari URL saat ini
+            const navLinks = document.querySelectorAll('.nav-link'); // Mengambil semua elemen <a> dengan class 'nav-link'
+
+            navLinks.forEach(link => {
+                // Mendapatkan nama file dari href tautan (misal: "index.html" dari "index.html")
+                const linkFileName = link.getAttribute('href').split('/').pop();
+
+                // Mendapatkan nama file dari URL saat ini (misal: "article.html" dari "http://localhost/my-website/article.html")
+                const currentFileName = currentPath.split('/').pop();
+
+                // Membandingkan nama file
+                if (linkFileName === currentFileName) {
+                    link.parentElement.classList.add('active'); // Tambahkan 'active' ke <li> induk
+                } else {
+                    link.parentElement.classList.remove('active'); // Pastikan menghapus jika bukan halaman aktif
+                }
+            });
+        });
+    </script>
+  <!------JS Scroll----->
+  <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+  </script>
+<section class="guestbook">
+        <h1>Buku Tamu</h1>
+        <p><i>Silakan tinggalkan pesan, kesan, keritik, dan saran Anda</i></p>
+        <div class="container">
+            <div class="form-section">
+                <h2>Nama:</h2>
+                <input type="text" id="nama" placeholder="Masukkan nama Anda">
+
+                <h2>Tanggal Berkunjung:</h2>
+                <input type="text" id="tanggal" placeholder="dd/mm/yyyy">
+
+                <h2>Email:</h2>
+                <input type="text" id="email" placeholder="contoh@email.com">
+
+                <h2>Pesan:</h2>
+                <textarea id="pesan" rows="6" placeholder="Tulis pesan Anda di sini..."></textarea>
+
+                <div class="buttons">
+                    <button id="kirimBtn" class="btn kirim">Kirim</button>
+                    <button id="resetBtn" class="btn reset">Reset</button>
+                </div>
+            </div>
+
+            <div class="messages-section">
+                <h2>Pesan Terkini</h2>
+                <div id="latestMessages" class="message-list">
+                    <div class="message-item">
+                        <div class="meta">
+                            <span>a</span>
+                            <span>30 Mei 2025</span>
+                        </div>
+                        <div class="content">keren</div>
+                    </div>
+                     <div class="message-item">
+                        <div class="meta">
+                            <span>Pengunjung</span>
+                            <span>28 Mei 2025</span>
+                        </div>
+                        <div class="content">Situs yang bagus dan sangat informatif!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const kirimBtn = document.getElementById('kirimBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const namaInput = document.getElementById('nama');
+            const tanggalInput = document.getElementById('tanggal');
+            const emailInput = document.getElementById('email');
+            const pesanTextarea = document.getElementById('pesan');
+            const latestMessagesDiv = document.getElementById('latestMessages');
+
+            function addMessage(nama, pesan, tanggal) {
+                const displayDate = tanggal ? tanggal : new Date().toLocaleDateString('id-ID', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                const messageItem = document.createElement('div');
+                messageItem.classList.add('message-item');
+
+                messageItem.innerHTML = `
+                    <div class="meta">
+                        <span>${nama || 'Anonim'}</span>
+                        <span>${displayDate}</span>
+                    </div>
+                    <div class="content">${pesan}</div>
+                `;
+
+                if (latestMessagesDiv.firstChild) {
+                    latestMessagesDiv.insertBefore(messageItem, latestMessagesDiv.firstChild);
+                } else {
+                    latestMessagesDiv.appendChild(messageItem);
+                }
+            }
+
+            kirimBtn.addEventListener('click', () => {
+                const nama = namaInput.value.trim();
+                const pesan = pesanTextarea.value.trim();
+                const tanggal = tanggalInput.value.trim();
+
+                if (pesan === "") {
+                    alert("Pesan tidak boleh kosong!");
+                    return;
+                }
+
+                addMessage(nama, pesan, tanggal);
+                pesanTextarea.value = '';
+            });
+
+            resetBtn.addEventListener('click', () => {
+                namaInput.value = '';
+                tanggalInput.value = '';
+                emailInput.value = '';
+                pesanTextarea.value = '';
+            });
+        });
+    </script>
+
+  <footer>
+    <div class="conten-footer">
+        <div class="footerisi">
+          <h2 class="contact">Contact Us</h2>
+          <p><b>Email</b>
+            <br>azmiadil2020@gmail.com</p>
+          <p><b>Phone</b>
+            <br>+62-8822-4212-558</p>
+          <p><b>Address</b>
+            <br>Jogorejo, Sendangsari, Mingggir, Sleman, Yogyakarta</p>
+          <div class="follow-Us">
+            <h2>Follow Us</h2>
+            <ul class="sosial-icon">
+              <a href="https://www.bing.com/ck/a?!&&p=42e2921c945f2c297f3e7b2cefdf967014a8f71af257d88b679d1facd9478444JmltdHM9MTc0NzYxMjgwMA&ptn=3&ver=2&hsh=4&fclid=129a5c2e-61c0-6128-1f2b-483860966008&psq=fesbookmpariwisata+jogja&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Bhcml3aXNhdGFqb2dqYWtvdGEvdmlkZW9zLw&ntb=1" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/azmi_adil_18/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.bing.com/ck/a?!&&p=ba7928ff73cbe6a46c4286d691474826ba9f1fe8db2cf45e5d6368f67ca3e82aJmltdHM9MTc0NzYxMjgwMA&ptn=3&ver=2&hsh=4&fclid=129a5c2e-61c0-6128-1f2b-483860966008&psq=tuwitter+pariwisata+jogja&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9wYXJpd2lzYXRheWs&ntb=1" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://pariwisata.jogjakota.go.id/" target="_blank"><i class="fa-brands fa-google-plus"></i></a>
+              <a href="https://www.youtube.com/@pariwisatakotajogja" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </ul>
+          </div>
+        </div>
+        <div class="footerisi">
+          <h2>Lokasi Wisata</h2>
+          <ul class="list">
+            <li><a href="https://maps.app.goo.gl/ZEvLGQvtaPo2LciG7" target="_blank">Tugu Jogja</a></li>
+            <li><a href="https://maps.app.goo.gl/YD6Pw4hnPEfN8DGK7" target="_blank">Malioboro</a></li>
+            <li><a href="https://maps.app.goo.gl/wBuKPwKqszhWoLPJ9" target="_blank">Titik 0 KM Jogjakarta</a></li>
+            <li><a href="https://maps.app.goo.gl/ZYcQ1xwipdGveTkz8" target="_blank">Keraton Yogyakarta</a></li>
+            <li><a href="https://maps.app.goo.gl/CBR8vLES7unVzE1W9" target="_blank">Benteng Vrendeburg</a></li>
+            <li><a href="https://maps.app.goo.gl/c4NUxoXo8Z1BB6qG6" target="_blank">Taman Sari</a></li>
+          </ul>
+        </div>
+        <div class="footerisi">
+          <h2>Lokasi Kota Jogja</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.97085555773!2d110.33364510515034!3d-7.803248457456635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1747711503129!5m2!1sen!2sid" width="300" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        </div>   
+    </div>
+    <div class="batten-bar">
+      <p>&copy; 2025 All right reserved</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

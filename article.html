@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI Pawiwisata KOTA JOGJA</title>
+  <link rel="stylesheet" href="article.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="tutupmenu()"></i>
+          <ul>
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="article.html" class="nav-link">ARTICLE</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="guest-book.html" class="nav-link">GUEST BOOK</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="bukakmenu()"></i>
+    </nav>
+    </div>
+  </section>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname; // Mengambil path dari URL saat ini
+            const navLinks = document.querySelectorAll('.nav-link'); // Mengambil semua elemen <a> dengan class 'nav-link'
+
+            navLinks.forEach(link => {
+                // Mendapatkan nama file dari href tautan (misal: "index.html" dari "index.html")
+                const linkFileName = link.getAttribute('href').split('/').pop();
+
+                // Mendapatkan nama file dari URL saat ini (misal: "article.html" dari "http://localhost/my-website/article.html")
+                const currentFileName = currentPath.split('/').pop();
+
+                // Membandingkan nama file
+                if (linkFileName === currentFileName) {
+                    link.parentElement.classList.add('active'); // Tambahkan 'active' ke <li> induk
+                } else {
+                    link.parentElement.classList.remove('active'); // Pastikan menghapus jika bukan halaman aktif
+                }
+            });
+        });
+    </script>
+
+
+  <section id="section1" class="isirow">
+    <h1>WISATA KOTA JOGJA</h1>  
+    <p>Selamat datang di Kota Yogyakarta, surga budaya dan sejarah di hati Pulau Jawa! 
+      <br>Jelajahi berbagai destinasi ikonik yang memadukan tradisi kental dengan pesona modern yang tak terlupakan.</p>
+    <div class="row">
+      <div class="course-col">
+       <button class="scroll-button" onclick="scrollToSection('isi1')">
+        <h3>MALIOBORO</h3>
+        <img src="img/malbor.jpg" alt="">
+        <P><b>Malioboro</b> adalah jantung pariwisata Yogyakarta, sebuah jalan legendaris yang selalu ramai dengan aktivitas belanja, kuliner, dan hiburan. Di sini, kamu bisa menemukan batik, kerajinan tangan, oleh-oleh khas,
+           hingga menikmati kuliner angkringan yang ikonik sambil merasakan suasana kota yang khas.</P>
+        </button>
+      </div>
+      <div class="course-col">
+      <button class="scroll-button" onclick="scrollToSection('isi2')">
+        <h3>KERATON</h3>
+        <img src="img/keraton.jpeg" alt="">
+        <P><b>Keraton Ngayogyakarta Hadiningrat</b> merupakan istana resmi Kesultanan Yogyakarta yang masih aktif hingga kini, sekaligus menjadi pusat kebudayaan dan tradisi Jawa yang kental. Pengunjung dapat menjelajahi kompleks keraton
+           untuk melihat arsitektur tradisional, koleksi benda-benda bersejarah, serta menyaksikan pagelaran seni seperti tari dan gamelan.</P>
+      </button>
+    </div>
+      <div class="course-col">
+      <button class="scroll-button" onclick="scrollToSection('isi3')">
+        <h3>BENTENG VRENDEBURG</h3>
+        <img src="img/msum.jpeg">
+        <P><b>Benteng Vredeburg</b> adalah saksi bisu sejarah kolonial di Yogyakarta, sebuah bangunan benteng yang dulunya menjadi markas Belanda. Kini, benteng ini berfungsi sebagai museum yang menampilkan diorama dan koleksi benda-benda 
+          bersejarah yang menggambarkan perjuangan kemerdekaan Indonesia dan perjalanan panjang kota Yogyakarta.</P>
+      </button>
+      </div>
+    </div>  
+  </section>
+
+  <section class="isi">
+    <h2>Baca Selengkapnya</h2> 
+        <div class="line"></div>  
+    <div class="isi1" id="isi1">
+    <br>
+    <br>
+     <h3>MALIOBORO</h3>
+        <img src="img/malbor.jpg" alt="">
+        <p>Yogyakarta, sebuah kota dengan julukan istimewa, tak akan lengkap tanpa menyebut nama Malioboro. Jalan legendaris ini bukan sekadar deretan toko atau tempat berlalu lalang; Malioboro adalah jantung pariwisata Yogyakarta, sebuah denyut nadi yang tak pernah berhenti memancarkan pesona, memikat setiap pasang mata yang menyusurinya.
+        <br>
+        <br>  Sepanjang Malioboro, kamu akan disambut oleh perpaduan sempurna antara aktivitas belanja, kuliner, dan hiburan yang tak ada habisnya. Di sini, semangat budaya lokal berpadu dengan geliat ekonomi kreatif, menciptakan atmosfer yang unik dan tak tertandingi. Dari ujung ke ujung, Malioboro adalah panggung kehidupan yang tak pernah sepi.
+        <br>
+        <br>  Surga Belanja dan Kerajinan Tangan Khas Jogja
+          Bagi para penggemar belanja, Malioboro adalah surga yang sesungguhnya. Di sepanjang trotoar yang ramai, deretan pedagang kaki lima menjajakan berbagai macam produk khas Yogyakarta. Kamu bisa menemukan batik dalam berbagai corak dan harga, mulai dari kain lembaran hingga pakaian jadi yang siap dikenakan. Tak hanya itu, aneka kerajinan tangan yang dibuat dengan ketelatenan, seperti topeng kayu, wayang kulit, anyaman bambu, hingga perhiasan perak, menjadi daya tarik tersendiri. Setiap barang seolah memiliki cerita dan kearifan lokal di baliknya.
+        <br>
+        <br>
+          Selain pedagang kaki lima, deretan toko dan pusat perbelanjaan modern juga berdiri kokoh, menawarkan pengalaman belanja yang lebih beragam. Dari merek lokal hingga produk fesyen terkini, semuanya tersedia di Malioboro. Jangan lupa untuk mencari oleh-oleh khas seperti bakpia Pathok, geplak, atau yangko yang bisa kamu bawa pulang sebagai buah tangan.
+        <br>
+        <br>
+          Petualangan Kuliner Malam di Angkringan Ikonik
+          Saat senja mulai turun dan lampu-lampu jalan menyala, Malioboro bertransformasi menjadi pusat kuliner malam yang menggoda selera. Angkringan, warung makan gerobak yang ikonik, menjadi daya tarik utama. Sambil duduk lesehan di tikar yang digelar di trotoar, kamu bisa menikmati aneka hidangan sederhana namun lezat seperti nasi kucing, sate usus, sate telur puyuh, gorengan, dan tentu saja, teh jahe panas yang menghangatkan. Suasana santai dan kebersamaan di angkringan adalah pengalaman yang wajib dicoba untuk merasakan denyut nadi kuliner malam Jogja yang sesungguhnya.
+        <br>
+        <br>
+          Selain angkringan, banyak pula restoran dan kafe yang menawarkan hidangan lokal maupun internasional. Dari gudeg yang manis gurih, sate klathak yang legendaris, hingga jajanan pasar yang membuat nostalgia, Malioboro siap memanjakan lidah setiap pengunjung.
+        <br>
+        <br>
+          Atraksi Budaya dan Seni Jalanan
+          Malioboro bukan hanya tentang belanja dan kuliner. Jalan ini juga menjadi panggung bagi para seniman jalanan. Kamu mungkin akan menemukan pertunjukan musik akustik, atraksi pantomim, atau bahkan seni lukis on-the-spot yang memukau. Keberadaan seniman-seniman ini menambah warna dan dinamika yang khas pada suasana Malioboro.
+        <br>
+        <br>
+          Selain itu, beberapa bangunan bersejarah dan arsitektur kolonial yang masih lestari di sepanjang jalan ini juga menambah nilai estetika dan historis Malioboro. Gedung Agung, Benteng Vredeburg, dan Pasar Beringharjo yang berada di sekitar Malioboro juga merupakan destinasi yang menarik untuk dikunjungi.
+        <br>
+        <br>
+          Lebih dari Sekadar Jalan
+          Malioboro adalah lebih dari sekadar sebuah jalan; ia adalah representasi hidup dari semangat Yogyakarta. Ia adalah tempat di mana tradisi berbaur dengan modernitas, di mana keramahan penduduknya terasa begitu hangat, dan di mana setiap sudut menyimpan kenangan manis. Mengunjungi Malioboro berarti menyelami esensi kota Jogja itu sendiri – sebuah pengalaman yang akan terus melekat dalam ingatan.
+
+          Jadi, ketika kamu berkunjung ke Yogyakarta, pastikan Malioboro menjadi daftar teratas petualanganmu. Nikmati setiap detik yang kamu habiskan di sana, resapi atmosfernya, dan biarkan keajaiban Malioboro merasuki jiwamu.</p>
+    </div>
+    <div class="isi1" id="isi2">
+    <br>
+    <br>
+    <h3>KERATON</h3>
+        <img src="img/keraton.jpeg" alt="">
+        <p>Keraton Ngayogyakarta Hadiningrat bukan sekadar bangunan tua, melainkan sebuah manifestasi hidup dari sejarah, budaya, dan spiritualitas Jawa yang tak terhingga. Sebagai istana resmi Kesultanan Yogyakarta yang masih aktif hingga kini, keraton ini berdiri kokoh sebagai simbol keagungan masa lalu sekaligus pusat denyut nadi kebudayaan dan tradisi Jawa yang kental. Setiap sudutnya menyimpan cerita, setiap ritualnya mengandung makna, menjadikannya destinasi wajib bagi siapa pun yang ingin menyelami kekayaan Nusantara.
+        <br>
+        <br>
+          Didirikan oleh Sri Sultan Hamengku Buwono I pada tahun 1755, pasca Perjanjian Giyanti, Keraton Yogyakarta dirancang dengan filosofi mendalam yang merefleksikan kosmologi Jawa. Lokasinya yang strategis, membentang dari Tugu Pal Putih di utara hingga Panggung Krapyak di selatan, dipercaya melambangkan garis lurus kehidupan manusia. Bangunan-bangunan di dalamnya, dengan arsitektur tradisional Jawa yang megah dan penuh detail, adalah saksi bisu perkembangan peradaban Mataram Islam.
+        <br>
+        <br>
+          Menjelajahi Kompleks Keraton: Sebuah Perjalanan Melintasi Waktu
+          Bagi pengunjung, menjelajahi kompleks keraton adalah seperti melakukan perjalanan melintasi lorong waktu. Dari pelataran depan hingga bagian-bagian yang lebih pribadi, setiap area memiliki fungsi dan keunikan tersendiri:
+        <br>
+        <br>
+          1. Pagelaran dan Sitihinggil: Di area inilah biasanya upacara-upacara besar atau kegiatan penting keraton diselenggarakan. Kemegahan arsitektur Jawa dengan pendopo-pendoponya yang luas segera menyambut pengunjung, memberikan gambaran awal tentang keagungan kompleks ini.
+          2. Koleksi Benda-benda Bersejarah: Di dalam keraton, terdapat museum-museum kecil yang memamerkan berbagai koleksi benda-benda bersejarah milik Kesultanan. Mulai dari alat musik gamelan kuno, senjata pusaka, kereta kencana, hingga potret para sultan terdahulu, semuanya tersimpan rapi dan menjadi saksi bisu perjalanan panjang Keraton Yogyakarta. Setiap artefak memiliki kisahnya sendiri, memperkaya pemahaman pengunjung tentang sejarah dan tradisi keraton.
+          3. Bangsal-bangsal Megah: Berbagai bangsal seperti Bangsal Kencana, Bangsal Kencono, dan Bangsal Proboyekso adalah contoh luar biasa dari arsitektur Jawa klasik. Tiang-tiang ukir, ornamen-ornamen rumit, dan tata letak yang simetris menunjukkan keahlian tinggi para perancang dan seniman masa lalu. Di sinilah berbagai upacara adat, pertemuan penting, dan pagelaran seni tradisional sering dilangsungkan.
+          4. Halaman dan Taman: Di antara bangunan-bangunan, terdapat halaman luas dan taman yang ditata apik, memberikan suasana tenang dan asri. Pepohonan rindang dan ornamen taman menambah keindahan kompleks keraton.
+        <br>
+        <br>
+          Saksikan Pagelaran Seni: Ruh Budaya yang Hidup
+          Salah satu daya tarik terbesar Keraton Ngayogyakarta Hadiningrat adalah kesempatan untuk menyaksikan pagelaran seni yang secara rutin diselenggarakan. Ini bukan sekadar pertunjukan, melainkan bagian integral dari upaya pelestarian budaya Jawa.
+        <br>
+        <br>
+          Tari Klasik Jawa: Pengunjung dapat terpukau oleh keanggunan gerakan para penari yang membawakan tari-tari klasik seperti Tari Bedhaya dan Tari Srimpi. Setiap gerakan, ekspresi, dan busana memiliki makna filosofis yang mendalam, mencerminkan nilai-nilai luhur budaya Jawa.
+          Gamelan: Alunan musik gamelan yang mistis dan menenangkan akan mengiringi langkahmu di dalam keraton. Instrumen-instrumen tradisional yang dimainkan oleh para niyaga (pemain gamelan) menciptakan harmoni yang khas, membawa pendengar pada suasana Jawa yang otentik.
+          Wayang Kulit: Meskipun tidak selalu setiap hari, Keraton juga sering menampilkan pagelaran wayang kulit, seni pertunjukan bayangan yang sarat dengan pesan moral dan kisah epik Ramayana atau Mahabharata.
+          Para abdi dalem, yang dengan setia menjaga tradisi dan menjalankan tugas-tugas keraton, juga menjadi bagian tak terpisahkan dari pengalaman berkunjung. Pakaian tradisional mereka, tutur kata yang halus, dan dedikasi mereka dalam melayani, menambah nuansa otentik yang membuat kunjungan ke keraton semakin berkesan.
+        <br>
+        <br>
+          Keraton Ngayogyakarta Hadiningrat bukan hanya sebuah destinasi wisata, melainkan sebuah pengalaman budaya yang mendalam. Ia adalah pengingat akan kemegahan masa lalu, penjaga tradisi yang tak lekang oleh waktu, dan pusat spiritualitas yang terus menginspirasi. Mengunjungi keraton berarti menyelami jiwa Jawa, merasakan denyut nadinya, dan menjadi bagian dari warisan budaya yang tak ternilai harganya.</p>
+    </div>
+    <div class="isi1" id="isi3">
+    <br>
+    <br>
+        <h3>BENTENG VRENDEBURG</h3>
+        <img src="img/msum.jpeg">
+        <p>Di tengah hiruk pikuk modernitas Yogyakarta, berdiri kokoh sebuah struktur batu yang membisu, menyimpan ribuan cerita dari masa lalu yang kelam namun penuh makna: Benteng Vredeburg. Benteng ini bukan sekadar peninggalan arsitektur kolonial, melainkan saksi bisu sejarah kolonial di Yogyakarta, sebuah monumen yang dulunya menjadi markas kekuatan asing, kini bertransformasi menjadi museum yang menceritakan kembali gigihnya perjuangan sebuah bangsa meraih kemerdekaan.
+        <br>
+        <br>
+          Dibangun pada tahun 1760 atas perintah Belanda dan dengan izin Sri Sultan Hamengku Buwono I, Benteng Vredeburg (yang berarti "Benteng Perdamaian" dalam bahasa Belanda) awalnya bernama Benteng Rustenburg (Benteng Peristirahatan). Ironisnya, nama "perdamaian" ini justru menjadi simbol dominasi dan kontrol kolonial atas Kesultanan Yogyakarta dan wilayah sekitarnya. Lokasinya yang strategis, sangat dekat dengan Keraton Yogyakarta dan Pasar Beringharjo, menunjukkan ambisi Belanda untuk memantau dan mengendalikan jantung kekuasaan dan ekonomi lokal.
+        <br>
+        <br>
+          Selama berabad-abad, benteng ini telah menyaksikan berbagai peristiwa penting. Dari masa penjajahan Belanda, pendudukan Jepang, hingga agresi militer Belanda pasca-kemerdekaan, tembok-tembok tebalnya telah menjadi saksi bisu kekejaman, perlawanan, dan akhirnya, kemenangan. Setelah kemerdekaan Indonesia, benteng ini mengalami beberapa kali perubahan fungsi hingga akhirnya pada tahun 1980-an, ditetapkan sebagai Museum Perjuangan Nasional.
+        <br>
+        <br>
+          Mengarungi Sejarah di Museum Benteng Vredeburg
+          <br>
+          Kini, Benteng Vredeburg berfungsi sebagai museum yang menampilkan diorama dan koleksi benda-benda bersejarah yang kaya. Kunjungan ke museum ini adalah perjalanan edukatif yang membuka mata tentang babak penting dalam sejarah Indonesia dan perjalanan panjang kota Yogyakarta.
+        <br>
+        <br>
+          1. Diorama Hidup: Daya tarik utama museum ini adalah deretan diorama tiga dimensi yang menggambarkan berbagai peristiwa penting dari masa penjajahan hingga kemerdekaan. Dari suasana penandatanganan Perjanjian Giyanti, perlawanan Pangeran Diponegoro, pendudukan Jepang, hingga peristiwa Serangan Umum 1 Maret 1949, setiap diorama dirancang dengan detail yang memukau. Pengunjung dapat melihat secara visual bagaimana perjuangan kemerdekaan itu terjadi, seolah-olah menjadi saksi langsung dari kejadian-kejadian bersejarah tersebut. Keterangan informatif yang menyertai setiap diorama membantu pengunjung memahami konteks dan signifikansi setiap adegan.
+        <br>
+        <br>
+          2. Koleksi Benda-benda Bersejarah: Selain diorama, museum ini juga menyimpan koleksi beragam benda-benda bersejarah. Mulai dari senjata tradisional, pakaian pejuang, alat-alat rumah tangga pada masa penjajahan, hingga dokumen-dokumen penting, semuanya dipamerkan untuk memberikan gambaran otentik tentang kehidupan dan perjuangan pada masa itu. Foto-foto hitam putih yang dipajang juga menambah kedalaman narasi sejarah yang disampaikan.
+        <br>
+        <br>
+          3. Bangunan dan Arsitektur Kolonial: Benteng itu sendiri adalah sebuah koleksi bersejarah. Pengunjung dapat mengamati arsitektur benteng yang khas, dengan dinding tebal, parit di sekelilingnya (meskipun kini kering), dan barak-barak prajurit yang telah direnovasi. Desain bangunannya yang kokoh mencerminkan tujuan awal sebagai pusat pertahanan dan pengawasan. Di beberapa bagian, pengunjung bisa melihat bekas-bekas sel tahanan yang menambah nuansa historis.
+        <br>
+        <br>
+          4. Aktivitas Edukasi dan Rekreasi: Selain sebagai museum, Benteng Vredeburg juga sering menjadi lokasi berbagai kegiatan edukasi dan budaya, seperti pameran seni, lokakarya sejarah, atau pertunjukan kebudayaan. Halaman tengah benteng yang luas sering dimanfaatkan untuk acara-acara publik, menjadikannya ruang terbuka yang dimanfaatkan kembali untuk kepentingan masyarakat.
+        <br>
+        <br>
+          Benteng Vredeburg adalah pengingat yang kuat akan betapa berharganya kemerdekaan. Ia bukan hanya sebuah bangunan yang menceritakan masa lalu, tetapi juga inspirasi bagi generasi sekarang dan mendatang. Kunjungan ke Benteng Vredeburg adalah kesempatan untuk merefleksikan perjuangan para pahlawan, memahami kompleksitas sejarah, dan menghargai nilai-nilai kemerdekaan yang telah diperjuangkan dengan darah dan air mata. Ia adalah jendela menuju jiwa patriotisme bangsa Indonesia yang tak pernah padam.</p>
+    </div>
+  </section>
+  <!------JS Scroll----->
+  <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+  </script>
+  <footer>
+    <div class="conten-footer">
+        <div class="footerisi">
+          <h2 class="contact">Contact Us</h2>
+          <p><b>Email</b>
+            <br>azmiadil2020@gmail.com</p>
+          <p><b>Phone</b>
+            <br>+62-8822-4212-558</p>
+          <p><b>Address</b>
+            <br>Jogorejo, Sendangsari, Mingggir, Sleman, Yogyakarta</p>
+          <div class="follow-Us">
+            <h2>Follow Us</h2>
+            <ul class="sosial-icon">
+              <a href="https://www.bing.com/ck/a?!&&p=42e2921c945f2c297f3e7b2cefdf967014a8f71af257d88b679d1facd9478444JmltdHM9MTc0NzYxMjgwMA&ptn=3&ver=2&hsh=4&fclid=129a5c2e-61c0-6128-1f2b-483860966008&psq=fesbookmpariwisata+jogja&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Bhcml3aXNhdGFqb2dqYWtvdGEvdmlkZW9zLw&ntb=1" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/azmi_adil_18/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.bing.com/ck/a?!&&p=ba7928ff73cbe6a46c4286d691474826ba9f1fe8db2cf45e5d6368f67ca3e82aJmltdHM9MTc0NzYxMjgwMA&ptn=3&ver=2&hsh=4&fclid=129a5c2e-61c0-6128-1f2b-483860966008&psq=tuwitter+pariwisata+jogja&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9wYXJpd2lzYXRheWs&ntb=1" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://pariwisata.jogjakota.go.id/" target="_blank"><i class="fa-brands fa-google-plus"></i></a>
+              <a href="https://www.youtube.com/@pariwisatakotajogja" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </ul>
+          </div>
+        </div>
+        <div class="footerisi">
+          <h2>Lokasi Wisata</h2>
+          <ul class="list">
+            <li><a href="https://maps.app.goo.gl/ZEvLGQvtaPo2LciG7" target="_blank">Tugu Jogja</a></li>
+            <li><a href="https://maps.app.goo.gl/YD6Pw4hnPEfN8DGK7" target="_blank">Malioboro</a></li>
+            <li><a href="https://maps.app.goo.gl/wBuKPwKqszhWoLPJ9" target="_blank">Titik 0 KM Jogjakarta</a></li>
+            <li><a href="https://maps.app.goo.gl/ZYcQ1xwipdGveTkz8" target="_blank">Keraton Yogyakarta</a></li>
+            <li><a href="https://maps.app.goo.gl/CBR8vLES7unVzE1W9" target="_blank">Benteng Vrendeburg</a></li>
+            <li><a href="https://maps.app.goo.gl/c4NUxoXo8Z1BB6qG6" target="_blank">Taman Sari</a></li>
+          </ul>
+        </div>
+        <div class="footerisi">
+          <h2>Lokasi Kota Jogja</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.97085555773!2d110.33364510515034!3d-7.803248457456635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1747711503129!5m2!1sen!2sid" width="300" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        </div>   
+    </div>
+    <div class="batten-bar">
+      <p>&copy; 2025 All right reserved</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

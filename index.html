@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SI Pawiwisata KOTA JOGJA</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <section class="header">
+    <nav>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="tutupmenu()"></i>
+          <ul>
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="article.html" class="nav-link">ARTICLE</a></li>
+            <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li><a href="guest-book.html" class="nav-link">GUEST BOOK</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="bukakmenu()"></i>
+    </nav>
+
+    <div class="isi-box">
+      <H1>Selamat Datang di KOTA JOGJA</H1>
+      <p>Jelajahi semua sudut kota Jogja dan temukan keindahan alam, bangunan, dan budaya yang memukau,
+        <br> keramahan warganya yang hangat, serta pesona sejarah yang tak terlupakan di setiap langkah.</p>
+      <button class="scroll-button" onclick="scrollToSection('atas')">Les't Go Explore</button>
+    </div>
+  </section>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname; // Mengambil path dari URL saat ini
+            const navLinks = document.querySelectorAll('.nav-link'); // Mengambil semua elemen <a> dengan class 'nav-link'
+
+            navLinks.forEach(link => {
+                // Mendapatkan nama file dari href tautan (misal: "index.html" dari "index.html")
+                const linkFileName = link.getAttribute('href').split('/').pop();
+
+                // Mendapatkan nama file dari URL saat ini (misal: "article.html" dari "http://localhost/my-website/article.html")
+                const currentFileName = currentPath.split('/').pop();
+
+                // Membandingkan nama file
+                if (linkFileName === currentFileName) {
+                    link.parentElement.classList.add('active'); // Tambahkan 'active' ke <li> induk
+                } else {
+                    link.parentElement.classList.remove('active'); // Pastikan menghapus jika bukan halaman aktif
+                }
+            });
+        });
+    </script>
+  <!------JS Scroll----->
+  <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        }
+  </script>
+
+<section class="isiatas" id="atas">
+    <h1>ABOUT KOTA JOGJA</h1>
+    <div class="line"></div>  
+    <div class="about">
+        <img src="img/about.jpg" alt="">
+        <div class="about-ctn">
+          <h2>Jogjakarta</h2>
+          <p>Jogyakarta, yang akrab disapa Jogja, adalah ibu kota dari Daerah Istimewa Yogyakarta, sebuah provinsi dengan status istimewa di Indonesia. Kota ini secara 
+            luas diakui sebagai jantung kebudayaan dan seni Jawa, tempat di mana warisan leluhur berpadu harmonis dengan denyut kehidupan modern. Dari hiruk pikuk
+             jalan Malioboro yang ikonik, selalu ramai dengan para pedagang, seniman jalanan, dan wisatawan, hingga keagungan Keraton Yogyakarta yang menjadi pusat
+              spiritual dan kebudayaan, Jogja menawarkan pengalaman yang kaya dan beragam bagi setiap pengunjungnya. Keramahan penduduknya yang tulus dan suasana kota yang tenang, namun selalu hidup, menjadikan Jogja sebuah destinasi yang tak
+                 hanya istimewa, tetapi juga selalu dirindukan untuk dikunjungi kembali.
+            </p>
+        </div>
+    </div>
+  </section>    
+  <section id="section1" class="isi">
+    <h1><a href="article.html">WISATA KOTA JOGJA</a></h1>  
+    <div class="line"></div>
+    <p>Selamat datang di Kota Yogyakarta, surga budaya dan sejarah di hati Pulau Jawa! 
+      <br>Jelajahi berbagai destinasi ikonik yang memadukan tradisi kental dengan pesona modern yang tak terlupakan.</p>
+    <div class="row">
+      <div class="course-col">
+        <h3>MALIOBORO</h3>
+        <img src="img/malbor.jpg" alt="">
+        <P><b>Malioboro</b> adalah jantung pariwisata Yogyakarta, sebuah jalan legendaris yang selalu ramai dengan aktivitas belanja, kuliner, dan hiburan. Di sini, kamu bisa menemukan batik, kerajinan tangan, oleh-oleh khas,
+           hingga menikmati kuliner angkringan yang ikonik sambil merasakan suasana kota yang khas.</P>
+    </div>
+      <div class="course-col">
+        <h3>KERATON</h3>
+        <img src="img/keraton.jpeg" alt="">
+        <P><b>Keraton Ngayogyakarta Hadiningrat</b> merupakan istana resmi Kesultanan Yogyakarta yang masih aktif hingga kini, sekaligus menjadi pusat kebudayaan dan tradisi Jawa yang kental. Pengunjung dapat menjelajahi kompleks keraton
+           untuk melihat arsitektur tradisional, koleksi benda-benda bersejarah, serta menyaksikan pagelaran seni seperti tari dan gamelan.</P>
+      </div>
+      <div class="course-col">
+        <h3>BENTENG VRENDEBURG</h3>
+        <img src="img/msum.jpeg">
+        <P><b>Benteng Vredeburg</b> adalah saksi bisu sejarah kolonial di Yogyakarta, sebuah bangunan benteng yang dulunya menjadi markas Belanda. Kini, benteng ini berfungsi sebagai museum yang menampilkan diorama dan koleksi benda-benda 
+          bersejarah yang menggambarkan perjuangan kemerdekaan Indonesia dan perjalanan panjang kota Yogyakarta.</P>
+
+    </div>
+    </div>  
+  </section>
+  <section class="album">
+    <h1><a href="gallery.html">GALLERY</a></h1>
+    <div class="line"></div>
+    <p>Jelajahi keindahan Yogyakarta melalui galeri foto kami! Dari ikon-ikon sejarah hingga sudut kota yang ramai, kami sajikan 
+      <br>pesona istimewa yang hanya bisa Anda temukan di Kota Gudeg ini.</p>
+      <div class="gallery">
+        <img src="img/1.jpg">
+        <img src="img/2.jpg">
+        <img src="img/3.jpg">
+        <img src="img/4.jpg">
+        <img src="img/5.jpg">
+        <img src="img/6.jpg">
+        <img src="img/7.jpg">
+      </div>
+    <p>
+      <br>Setiap gambar bercerita tentang kekayaan budaya dan pesona tak terlupakan Yogyakarta. Nikmati suasana khas yang memadukan 
+      <br>tradisi, sejarah, dan keramahan yang selalu membuat rindu.</p>
+  </section>
+
+<!------JS Menu------->
+  <script>
+  
+    var navLinks = document.getElementById("navLink")
+    function bukakmenu(){
+      navLinks.style.right = "0";
+    }
+    function tutupmenu(){
+      navLinks.style.right = "-200px";
+    }
+
+  </script>
+
+  <footer>
+    <div class="conten-footer">
+        <div class="footerisi">
+          <h2 class="contact">Contact Us</h2>
+          <p><b>Email</b>
+            <br>azmiadil2020@gmail.com</p>
+          <p><b>Phone</b>
+            <br>+62-8822-4212-558</p>
+          <p><b>Address</b>
+            <br>Jogorejo, Sendangsari, Mingggir, Sleman, Yogyakarta</p>
+          <div class="follow-Us">
+            <h2>Follow Us</h2>
+            <ul class="sosial-icon">
+              <a href="https://www.bing.com/ck/a?!&&p=42e2921c945f2c297f3e7b2cefdf967014a8f71af257d88b679d1facd9478444JmltdHM9MTc0NzYxMjgwMA&ptn=3&ver=2&hsh=4&fclid=129a5c2e-61c0-6128-1f2b-483860966008&psq=fesbookmpariwisata+jogja&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Bhcml3aXNhdGFqb2dqYWtvdGEvdmlkZW9zLw&ntb=1" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/azmi_adil_18/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.bing.com/ck/a?!&&p=ba7928ff73cbe6a46c4286d691474826ba9f1fe8db2cf45e5d6368f67ca3e82aJmltdHM9MTc0NzYxMjgwMA&ptn=3&ver=2&hsh=4&fclid=129a5c2e-61c0-6128-1f2b-483860966008&psq=tuwitter+pariwisata+jogja&u=a1aHR0cHM6Ly90d2l0dGVyLmNvbS9wYXJpd2lzYXRheWs&ntb=1" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://pariwisata.jogjakota.go.id/" target="_blank"><i class="fa-brands fa-google-plus"></i></a>
+              <a href="https://www.youtube.com/@pariwisatakotajogja" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </ul>
+          </div>
+        </div>
+        <div class="footerisi">
+          <h2>Lokasi Wisata</h2>
+          <ul class="list">
+            <li><a href="https://maps.app.goo.gl/ZEvLGQvtaPo2LciG7" target="_blank">Tugu Jogja</a></li>
+            <li><a href="https://maps.app.goo.gl/YD6Pw4hnPEfN8DGK7" target="_blank">Malioboro</a></li>
+            <li><a href="https://maps.app.goo.gl/wBuKPwKqszhWoLPJ9" target="_blank">Titik 0 KM Jogjakarta</a></li>
+            <li><a href="https://maps.app.goo.gl/ZYcQ1xwipdGveTkz8" target="_blank">Keraton Yogyakarta</a></li>
+            <li><a href="https://maps.app.goo.gl/CBR8vLES7unVzE1W9" target="_blank">Benteng Vrendeburg</a></li>
+            <li><a href="https://maps.app.goo.gl/c4NUxoXo8Z1BB6qG6" target="_blank">Taman Sari</a></li>
+          </ul>
+        </div>
+        <div class="footerisi">
+          <h2>Lokasi Kota Jogja</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63245.97085555773!2d110.33364510515034!3d-7.803248457456635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sYogyakarta%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1747711503129!5m2!1sen!2sid" width="300" height="240" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        
+        </div>   
+    </div>
+    <div class="batten-bar">
+      <p>&copy; 2025 All right reserved</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
